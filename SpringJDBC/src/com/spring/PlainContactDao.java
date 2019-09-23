@@ -24,7 +24,7 @@ public class PlainContactDao implements ContactDao{
         
         }
     }
-    private int id;
+   
     
     private Connection getConnection() throws SQLException{
     return DriverManager.getConnection("jdbc:mysql://localhost:3306/spring", "root", "root");
@@ -45,6 +45,7 @@ public class PlainContactDao implements ContactDao{
     
 
     
+    @Override
     public List<Contact> findAll() {
      List<Contact> result = new ArrayList<>();
      
@@ -86,7 +87,7 @@ public class PlainContactDao implements ContactDao{
             Statement.RETURN_GENERATED_KEYS);
             pst.setString(1, contact.getFirstName());
             pst.setString(2, contact.getLastName());
-            pst.setDate(3, contact.getBirthDate());
+            pst.setDate(3,(Date) contact.getBirthDate();
             pst.execute();
             
             ResultSet generatedKeys = pst.getGeneratedKeys();
@@ -103,10 +104,12 @@ public class PlainContactDao implements ContactDao{
     }
 
 
+    @Override
     public void update(Contact contact) {
 
     }
 
+    @Override
     public void delete(int contactId) {
         Connection con = null;
         try{

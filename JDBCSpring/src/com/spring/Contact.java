@@ -11,14 +11,14 @@ import java.util.List;
 
 /**
  *
- * @author user
+ * @author Java
  */
 public class Contact implements Serializable{
     private int id;
     private String firstName;
     private String lastName;
     private Date birthDate;
-    private List<ContactDetails> contact;
+    private List<ContactDetail> contact;
 
     public int getId() {
         return id;
@@ -52,13 +52,21 @@ public class Contact implements Serializable{
         this.birthDate = birthDate;
     }
 
+    public List<ContactDetail> getContact() {
+        return contact;
+    }
+
+    public void setContact(List<ContactDetail> contact) {
+        this.contact = contact;
+    }
+    
+    
+    
     @Override
     public String toString(){
        return "Contact -Id: "+ id + ",First name: "+ firstName + ", Last name: " +lastName+ "Birthday: " + birthDate;
    
    
    }
-    
-    
     
 }

@@ -9,9 +9,9 @@ import java.io.Serializable;
 
 /**
  *
- * @author user
+ * @author Java
  */
-class ContactDetails implements Serializable{
+public class ContactDetail implements Serializable{
     private int id;
     private int contactId;
     private String telType;
@@ -52,7 +52,7 @@ class ContactDetails implements Serializable{
     
     
     @Override
-    public String toString(){
+     public String toString(){
        return "Contact -Id: "+ id + ", Contact id: "+ contactId + ", Type: " +telType+ "Number : " + telNumber;
    
    
