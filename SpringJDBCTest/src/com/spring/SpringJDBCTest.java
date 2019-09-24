@@ -27,6 +27,7 @@ public class SpringJDBCTest {
 //            Logger.getLogger(SpringJDBC.class.getName()).log(Level.SEVERE, null, ex);
   System.out.println("Message "+ ex.getMessage());
         }
+  System.out.println("Name for product id 1 is: " + ProductDao.findNameById(1));
     }
     
 }

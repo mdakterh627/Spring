@@ -5,13 +5,21 @@
  */
 package com.spring;
 
+import java.sql.ResultSet;
 import java.util.List;
+import org.springframework.jdbc.core.RowMapper;
 
 /**
  *
  * @author Java
  */
-public interface ProductService {
+public interface ProductService extends RowMapper<Product>{
+    
      public List<Product> getProducts();
+      public String findFirstNameById(int id);
+     
+     public Product mapRow(ResultSet rs, int rowNum);
+
+    
     
 }
