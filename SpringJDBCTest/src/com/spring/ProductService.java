@@ -18,6 +18,7 @@ public interface ProductService extends RowMapper<Product>{
      public List<Product> getProducts();
       public String findFirstNameById(int id);
      
+     @Override
      public Product mapRow(ResultSet rs, int rowNum);
 
     
