@@ -5,15 +5,10 @@
  */
 package com.hibernate;
 
-import java.util.List;
-
 /**
  *
  * @author Java
  */
-public interface ProductService {
-    public List<Product> getProduct();
-
-    public Object getProducts();
+class ProductServiceImpl {
     
 }

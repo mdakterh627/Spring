@@ -5,6 +5,9 @@
  */
 package com.hibernate;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 /**
  *
  * @author Java
@@ -16,6 +19,9 @@ public class TestHibernate {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Beans.xml");
+		ProductService productService =applicationContext.getBean("productService", ProductServiceImpl.class);
+		System.out.println("-----------"+productService.getProducts().get(1).getName());
     }
     
 }

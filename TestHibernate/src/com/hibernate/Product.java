@@ -5,9 +5,11 @@
  */
 package com.hibernate;
 
+import static java.awt.font.TransformAttribute.IDENTITY;
 import java.io.Serializable;
-import javax.persistence.*;
-import static javax.persistence.GenerationType.IDENTITY;
+import org.hibernate.annotations.Entity;
+import org.hibernate.annotations.Table;
+
 
 /**
  *
